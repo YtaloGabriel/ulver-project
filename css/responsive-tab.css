@@ -1,0 +1,32 @@
+@media only screen and (max-width: 980px) {
+    header { padding:80px 20px; height:auto;}
+    div#headeritems {justify-content:center;}
+    div#headerimg {
+        width:210px;
+        margin-left:30px;
+        background-image: url('../img/img2.svg');
+    }
+    div#portfolio {height:300px;}
+    div.pi_texts {overflow:hidden; height:240px;}
+    div.pi_texts span {margin-top:20px; }
+    div#contact {flex-wrap: wrap;justify-content:center;}
+    form {margin-right:25px;}
+    div#footdir {margin:0;padding:0;height:auto;}
+    div#about {padding-top:17px;min-width:250px;}
+    div.separator {display:none;}
+}
+
+@media only screen and (max-width: 883px) {
+    form {margin:0;}
+    div#footdir {width:545px; margin-top:25px;}
+    div#footimg {
+        display:block;
+        width: 350px;
+        height:210px !important;
+        background-image: url('../img/img3.svg');
+        background-position:center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height:100%;
+    }
+}

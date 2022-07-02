@@ -1,0 +1,84 @@
+@media only screen and (max-width: 710px) {
+    div#menuresp {display:block;z-index: 1000;}
+    div#menu {
+        margin-left:-100%;
+        transition: .3s;
+    }
+    .hidemenu {margin-left:0 !important;}
+    header { height:400px !important;}
+    div#headeritems {margin-top:0;}
+    h1#logo {color:var(--amarelo1)}
+    div#headerimg {display:none;}
+    div#apresentation h1 {font-size:2em;}
+    div#geral {padding:0 20px;}
+    div.card {width:100%;}
+    div#portfolio {
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        height:auto !important;
+    }
+    div#portimgs {width:100%;height:200px; }
+    div#portinfo {height:250px; }
+    div.pi_texts {padding:0 20px; height:250px !important;}
+    p.pit_sub {
+        overflow:hidden;
+        text-overflow: ellipsis;
+        margin-right:20px;
+        height:100px;
+    }
+    div#contact {flex-direction:column;min-width: 0;}
+    form {
+        width:100%;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        margin:0 auto;
+        min-width:0;
+    }
+    #c1 {margin-bottom:25px;}
+    #c2 {width:100%;}
+    #c3 {width:100%;}
+    div#footdir {min-width: 0; width:100% !important; justify-content:center;}
+    div#about {max-width:200px;min-width:210px !important;}
+    div#footimg {
+        background-image:url('../img/svg/icons/smartphone.svg') !important;
+        width:90px !important;
+        min-width:0;
+    }
+    ::-webkit-scrollbar {display:none;}
+    div#menu {
+        display:block;
+        position:fixed;
+        height:100%;
+        width:100%;
+        transition:.5s;
+    }
+    div#menucont {
+        display:flex;
+        height: 100vh;
+        align-items: center;
+    }
+    div#menuitems {
+        flex-direction:column;
+        justify-content: center;
+        width:80% !important;
+        margin:-40% auto 0 auto;
+    }
+    div#menuitems h1 {
+        font-size:4em;
+        margin-bottom:40px;
+    }
+    div#links {
+        width: 100%;
+        display:flex;
+        flex-direction:column;
+    }
+    div#links a {
+        font-size:26px;
+        margin-bottom:10px;
+        padding:10px 0;
+    }
+    div#links a:nth-last-child(1) {text-align:center;margin-top:20px;}
+}
+

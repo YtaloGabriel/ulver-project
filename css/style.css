@@ -1,0 +1,448 @@
+* {margin:0;padding:0;box-sizing:border-box;}
+html {scroll-behavior: smooth;}
+::placeholder {color:var(--branco);font-style:italic;opacity:.8;}
+:root {
+    --dark:    #1C1E27;
+    --roxo1:   #2A1B54;
+    --roxo2:   #1B1A2F;
+    --roxo3:   #0f0e1b;
+    --azul1:   #00ccff;
+    --azul2:   #079bab;
+    --branco:  #F0F0F0;
+    --amarelo1:#FEC24B;
+    --verde1:  #44A682;
+}
+a {text-decoration:none;color:var(--branco);}
+
+h1 {font-size:2.5em;}
+h2 {font-size:2em;}
+h3 {font-size:1.5em}
+h4 {font-size:1em;}
+
+body {
+    background-color:var(--branco);
+    font-family:'Roboto', Helvetica, sans-serif;
+    color: var(--branco);
+}
+.cont {
+    display:flex;
+    width:100% !important;
+    max-width:900px !important;
+}
+div#menu {
+    background-color: var(--roxo3);
+    position:fixed;
+    z-index:100 !important;
+    width:100%;
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 40px;
+    transition:.3s;
+}
+div#menucont {
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+    max-width: 900px;
+}
+div#menuitems {
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+}
+h1#logo, div#apresentation span {font-family: 'Sansita Swashed', Roboto !important;}
+a.link {padding:5px;margin:0 5px;}
+a.link:nth-last-child(1){
+    background-color: var(--azul1);
+    padding:10px 15px;
+    border-radius:2px;
+    color:var(--roxo2);
+}
+header {
+    width: 100%;
+    height: 500px;
+    background-color: var(--roxo2);
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    padding:0 20px;
+}
+div#headeritems {margin-top:80px;justify-content: space-between;}
+div#apresentation span {color:var(--amarelo1);font-size:1.2em;line-height: 30px;}
+div#apinfo {margin-top:15px;}
+div#apinfo span {
+    opacity:.7;
+    margin-right:10px;
+    color:var(--azul1)
+}
+header img {max-height:200px;}
+div#headerimg {
+    height:200px;
+    width:476px;
+    background-image:url('../img/img1.svg');
+    background-position:center;
+    background-size:100% 100%;
+}
+div#headbullet {
+    position:absolute;
+    bottom:-95%;
+    height:100%;
+    width: 200%;
+    align-self: flex-end;
+    border-radius:50%;
+    background-color:var(--verde1);
+    z-index:1;
+}
+a.dropdown {
+    position:absolute;
+    width: 60px;
+    height: 60px;
+    background-color:var(--azul2);
+    border-radius:50%;
+    bottom:5px;
+    border:5px solid var(--roxo2);
+    z-index:80;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-image: url(../img/svg/icons/down.svg);
+    background-position:center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+/* __________________Menu Responsivo_______________ */
+
+div#menuresp {
+    background-color:rgba(0,0,0,.7);
+    height:50px;
+    width: 50px;
+    border-radius:50%;
+    background-image: url('../img/svg/icons/menu.svg');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position:center;
+    position:fixed;
+    z-index:30;
+    margin:20px;
+    display:none;
+    cursor:pointer;
+}
+
+
+/*________________Fim do Header_____________*/
+
+div#geral {
+    width: 100%;
+    padding:0 40px;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+
+div#carac {
+    width:100%;
+    max-width:1000px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:160px 0 0 0;
+}
+div.card {
+    height:250px;
+    width: 286px;
+    background-color: var(--roxo2);
+    border-radius:6px;
+    margin:10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom:60px;
+}
+div.cardimg {
+    background-color:var(--azul2);
+    width:130px;
+    height:130px;
+    margin-top:-60px;;
+    border-radius:50%;
+    border:5px solid var(--branco);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background-position:center;
+    background-size: 70px;
+    background-repeat: no-repeat;
+}
+#ci1 {background-image: url(../img/svg/icons/move.svg);}
+#ci2 {background-image: url(../img/svg/icons/click.svg);}
+#ci3 {background-image: url(../img/svg/icons/sticker.svg);}
+
+span.cardtit {
+    font-size:1.1em;
+    margin-top:20px;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    color:var(--azul1);
+    text-transform:uppercase;
+}
+span.cardtit::after {
+    content:"";
+    width:40px;
+    height:2px;
+    position: relative;
+    background-color: var(--branco);
+    margin:15px 0 20px 0;
+}
+p.cardinfo {
+    height:100px;
+    width:100%;
+    padding:0 15px;
+    text-align:center;
+    font-size:15px;
+    font-style:italic;
+    color:var(--branco);
+}
+
+/* __________________Fim dos Cards______________ */
+
+div#port {padding-top:100px;width:100%;display:flex;justify-content:center;}
+div#portfolio {
+    width:100%;
+    max-width:900px;
+    height:350px;
+    background-color:var(--roxo3);
+    border-radius:5px;
+    overflow:hidden;
+    display:flex;
+}
+div#portimgs {
+    flex:1;
+    height:100%;
+    background-color: var(--roxo2);
+    display:flex;
+    overflow:hidden;
+}
+div.slideimg {
+    display:none;
+    width: 100%;
+    height: 100%;
+    background-position:center;
+    background-size: auto calc(100% - 40px);
+    background-repeat: no-repeat;
+    animation-name: fade;
+    animation-duration: 1s;
+    position:relative;
+}
+div.slideimg a {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+}
+div#portinfo {
+    height:100%;
+    width:330px;
+    display:flex;
+    flex-direction:column;
+}
+div.pi_texts, div.pi_buttons {
+    width:100%;
+    display:flex;
+}
+div.pi_texts {
+    height:255px;
+    padding:20px;
+    flex-direction:column;
+}
+div.pi_texts span {
+    margin:50px 0 10px 0;
+    color:var(--amarelo1);
+    font-style:italic;
+}
+
+.pit_tit {margin-bottom:15px;}
+.pit_sub {opacity:.7;}
+.pit_tit, .pit_sub {
+    display:none;
+    animation-name: deslize;
+    animation-duration: 1s;
+}
+.active {display:block !important;}
+
+div.pi_buttons {
+    height:95px;
+    padding:20px;
+    align-items: center;
+}
+div.pi_buttons span {
+    display:flex;
+    width: 40px;
+    height: 40px;
+    align-items:center;
+    justify-content: center;
+    border:none;
+    background-color: inherit;
+    color:#fff;
+    outline:transparent;
+    cursor:pointer;
+}
+div.pi_buttons span:hover {background-color:rgba(255,255,255,.1);}
+
+span#prev, span#next {
+    display:none !important; /*____ Display dos botões do slide _____*/
+    background-size:25px;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+span#prev {background-image: url('../img/svg/icons/prev.svg');}
+span#next {background-image: url('../img/svg/icons/next.svg');}
+
+/* _____________________ Fim do Slide/Portfólio __________________ */
+div#foot {padding-top:100px;}
+footer {
+    padding:40px 20px;
+    width:100%;
+    height:auto;
+    background-color: var(--roxo3);
+    margin-top:50px;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items:center;
+}
+div#contact {
+    display:flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content:space-between;
+}
+form {
+    max-width:545px;
+    display:flex;
+    flex-wrap: wrap;
+    margin-right:35px;
+}
+div#about {
+    flex:1;
+    max-width:545px;
+}
+div#c1, div#c2 {min-width:50%;}
+
+div#c1 {
+    flex:1;
+    padding:0 20px;
+    display:flex;
+    justify-content:flex-end;
+}
+div#c1 > h1 {
+    font-family: 'Courgette', cursive;
+    font-style:italic;
+    font-size:4.7em;
+    line-height:.85em;
+    color:var(--amarelo1);
+}
+div#c2 {
+    flex:1;
+    display:flex;
+    align-items:flex-end;
+}
+div#c2 > input {
+    height:45px;
+    flex:1;
+    border:2px solid var(--branco);
+    background-color: transparent;
+    border-radius:4px;
+    outline:transparent;
+    padding:0 15px;
+}
+div#c3 {
+    flex:1;
+    display:flex;
+    align-items:center;
+    height:120px;
+    margin-top:15px;
+}
+div#c3 > textarea {
+    flex:1;
+    height:100%;
+    border-radius:4px;
+    border:2px solid var(--branco);
+    outline:transparent;
+    background-color: transparent;
+    font-size:18px;
+    padding:10px;
+    resize:none;
+}
+div#c3 > button {
+    background-color:var(--verde1);
+    border:none;
+    outline: transparent;
+    height:100%;
+    width:50px;
+    font-size:30px;
+    border-radius:4px;
+    color:var(--branco);
+    cursor:pointer;
+    margin-left:15px;
+}
+div#c3 > button > div {
+    height:100%;
+    width:100%;
+    background-image: url('../img/svg/icons/next.svg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:30px;
+}
+div#c3 > button:hover {background-color:#5bd6a9;}
+div#c2 > input, div#c3 > textarea {transition:.3s;color:var(--branco);}
+div#c2 > input:focus, div#c3 > textarea:focus {border-color:var(--azul1);}
+
+/* _________________FIM DO FORMULÁRIO______________ */
+
+div#footdir {
+    padding-top:22px;
+    display:flex;
+    justify-content:space-between;
+}
+div#about {
+    flex:1;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}
+
+div#about > span {
+    font-size:15px;
+    font-style:italic;
+    margin-bottom:8px;
+    color:rgba(255,255,255,.7);
+}
+div#about > span#about {
+    font-size:18px;
+    color:var(--azul1) !important;
+    display:flex;
+    flex-direction:column;
+    font-style:normal;
+}
+div#about > span#about::after {
+    content:"";
+    width:50px;
+    height:2px;
+    background-color: #fff;
+    position: relative;
+    margin:10px 0;
+}
+div#about a {
+    color:var(--amarelo1);
+    font-style:normal;
+}
+div#about > span:last-child {
+    font-size:14px;
+    color:rgba(255,255,255,.3);
+}
+
